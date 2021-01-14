@@ -8,6 +8,7 @@ jobs:
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
+    - run: env
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Git config
