@@ -15,7 +15,7 @@ jobs:
       run: git config --global user.name myitcv && git config --global user.email paul@myitcv.io
     - name: Make change
       run: echo Hello >> README.md
-    - run: git branch -a
+    - run: git branch --show-current
     - run: git remote -v
     - name: Commit
       run: git add -A && git commit -am 'A change'
