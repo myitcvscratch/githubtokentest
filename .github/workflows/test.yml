@@ -10,3 +10,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - name: Make change
+      run: echo Hello >> README.md
+    - name: Commit
+      run: git commit -am 'A change'
+    - name: Push
+      run: git push
