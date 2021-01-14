@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2
     - run: ls -la ~/
     - name: Git config
-      run: git config --global user.name myitcv && git config --global user.email paul@myitcv.io
+      run: git config --global user.name cueckoo && git config --global user.email cueckoo@gmail.com
     - name: Make change
       run: echo Hello >> README.md
     - run: git branch --show-current
