@@ -14,7 +14,9 @@ jobs:
       run: git config --global user.name myitcv && git config --global user.email blah@blah.com
     - name: Make change
       run: echo Hello >> README.md
+    - run: git branch -a
+    - run: git remote -v
     - name: Commit
       run: git add -A && git commit -am 'A change'
     - name: Push
-      run: git push
+      run: git push origin
