@@ -11,7 +11,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Git config
-      run: git config --global user.name myitcv && git config --global user.email blah@blah.com
+      run: git config --global user.name myitcv && git config --global user.email paul@myitcv.io
     - name: Make change
       run: echo Hello >> README.md
     - run: git branch -a
