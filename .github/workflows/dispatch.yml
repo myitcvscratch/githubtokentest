@@ -17,7 +17,7 @@ jobs:
         git config http.https://github.com/.extraheader "AUTHORIZATION: basic $(echo -n cueckoo:$MYITCV_GITHUB_PAT | base64)"
     - run: git config -l
     - run: git checkout -b blah
-    - run: echo "Hello" >> README.md
+    - run: echo "    - run: echo Hello" >> .github/workflows/test.yml
     - run: git add -A
     - run: git commit -am 'A commit'
     - run: git push -f origin blah
