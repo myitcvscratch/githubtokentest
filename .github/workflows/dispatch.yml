@@ -1,0 +1,10 @@
+on: [repository_dispatch]
+name: Dispatch
+jobs:
+  createbranch:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.action == 'asdf' }}
+    steps:
+    - run: |
+      echo "hello world"
+      echo "hello world"
