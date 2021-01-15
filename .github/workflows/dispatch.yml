@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.action == 'asdf' }}
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
     - run: |
         git branch -a
         git config --global user.name cueckoo
