@@ -1,4 +1,6 @@
 on: [repository_dispatch]
+env:
+  MYITCV_GITHUB_PAT: ${{ secrets.MYITCV_GITHUB_PAT }}
 name: Dispatch
 jobs:
   createbranch:
@@ -10,6 +12,9 @@ jobs:
     - run: git branch -a
     - run: git config --global user.name cueckoo
     - run: git config --global user.email cueckoo@gmail.com
+    - run: git config -l
+    - run: git config http.https://github.com/.extraheader "AUTHORIZATION: basic $(echo -n myitcv:$MYITCV_GITHUB_PAT | base64)"
+    - run: git config -l
     - run: git checkout -b blah
     - run: echo "Hello" >> README.md
     - run: git add -A
