@@ -6,5 +6,11 @@ jobs:
     if: ${{ github.event.action == 'asdf' }}
     steps:
     - run: |
-        echo "hello world"
-        echo "hello world"
+        git branch -a
+        git config --global user.name cueckoo
+        git config --global user.email cueckoo@gmail.com
+        git checkout -b blah
+        echo "Hello" >> README.md
+        git add -A
+        git commit -am 'A commit'
+        git push
