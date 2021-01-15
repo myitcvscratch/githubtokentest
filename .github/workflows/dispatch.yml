@@ -14,7 +14,7 @@ jobs:
     - run: git config --global user.email cueckoo@gmail.com
     - run: git config -l
     - run: |-
-        git config http.https://github.com/.extraheader "AUTHORIZATION: basic $(echo -n myitcv:$MYITCV_GITHUB_PAT | base64)"
+        git config http.https://github.com/.extraheader "AUTHORIZATION: basic $(echo -n cueckoo:$MYITCV_GITHUB_PAT | base64)"
     - run: git config -l
     - run: git checkout -b blah
     - run: echo "Hello" >> README.md
