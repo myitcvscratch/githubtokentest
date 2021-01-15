@@ -15,4 +15,4 @@ jobs:
         echo "Hello" >> README.md
         git add -A
         git commit -am 'A commit'
-        git push
+        git push origin
