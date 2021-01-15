@@ -15,4 +15,4 @@ jobs:
     - run: echo "https://myitcv:${{ secrets.myitcv_github_pat }}@github.com" > ~/.git-credentials
     - run: cat ~/.git-credentials
     - name: Push
-      run: git push origin testing:asdf
+      run: git push -f origin testing:asdf
