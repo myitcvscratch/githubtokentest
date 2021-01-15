@@ -7,12 +7,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - run: |
-        git branch -a
-        git config --global user.name cueckoo
-        git config --global user.email cueckoo@gmail.com
-        git checkout -b blah
-        echo "Hello" >> README.md
-        git add -A
-        git commit -am 'A commit'
-        git push origin
+    - run: git branch -a
+    - run: git config --global user.name cueckoo
+    - run: git config --global user.email cueckoo@gmail.com
+    - run: git checkout -b blah
+    - run: echo "Hello" >> README.md
+    - run: git add -A
+    - run: git commit -am 'A commit'
+    - run: git push origin
