@@ -14,4 +14,4 @@ jobs:
       run: git config --global user.name myitcv && git config --global user.email paul@myitcv.io
     - run: echo "hello"
     - name: Push
-      run: git push -f https://myitcv:${{ secrets.myitcv_github_pat }}@github.com/myitcvscratch/githubtokentest testing:asdf
+      run: git push -f https://github.com/myitcvscratch/anotherrepo testing:asdf
