@@ -8,6 +8,10 @@ jobs:
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
+    - name: Dump
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Git config
